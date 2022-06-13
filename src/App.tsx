@@ -12,7 +12,7 @@ import IconContact from "./components/svg/contact";
 
 const App = () => {
   const [images, setImages] = useState<ImageResponse[]>();
-  const [imageCount, setImageCount] = useState(1);
+  const [imageCount, setImageCount] = useState(20);
 
   useEffect(() => {
     fetch(`images?limit=${imageCount}`)
