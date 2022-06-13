@@ -1,9 +1,6 @@
-
 # Motorway UI Test
 
-
 Welcome to the Motorway UI technical test. This test focuses on user experience, and your skills with HTML, CSS, a11y and leveraging browser APIs.
-
 
 ## Set up
 
@@ -22,7 +19,6 @@ After this, CRA will open a tab with the app running, usually `localhost:3000`. 
 - The server and CRA are watching the relevant files and will hot reload if any changes are made.
 
 - Feel free to modify or install whatever code you feel is necessary. If installing packages which are wrappers for native browsers APIs please leave a comment explaining why.
-
 
 ## Tasks
 
@@ -48,11 +44,9 @@ Modal to review full size images
 
 Image effects or filters
 
-
 ### 2. Performance
 
 The API that is returning images is rather slow. Show how it can be sped up, and show how you would measure the improvement in performance.
-
 
 ### 3. Forms
 
@@ -66,13 +60,19 @@ Add a form to your app with the following fields. The form doesn't need to submi
 - [ ] Favourite colour
 - [ ] Salary (using a range input)
 
-
 ## Time allowed
 
 We appreciate that your time is valuable and recommend you not spend more than 2 hours on these tasks.
-
 
 ## Notes
 
 The goal of the test is to prove your understanding of the concepts of modern HTML/CSS/JS, but not to produce something production ready or pixel perfect.
 Your work will be tested in the browser of your choice, so please specify this when submitting. This can include pre-release browsers such as Chrome Canary or Safari Technology Preview if you want to work with experimental features.
+
+# Packages installed
+
+- typescript for type safety
+- react-spring to quickly make state reactive animations
+- @react-aria/slider to bootstrap accessible sliders
+- @react-aria/interactions for better hover detection
+- @react-aria/color for accessible color input
