@@ -132,7 +132,6 @@ const ImageDetail = ({ image, onClose }: Props) => {
                       minValue,
                       maxValue,
                       onChange: (value) => {
-                        console.log(value);
                         update(property, value[0]);
                       },
                     }}
