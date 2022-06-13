@@ -76,3 +76,21 @@ Your work will be tested in the browser of your choice, so please specify this w
 - @react-aria/slider to bootstrap accessible sliders
 - @react-aria/interactions for better hover detection
 - @react-aria/color for accessible color input
+
+# Performance
+
+The primary bottleneck in performance is the size of images, there a few options to lessen the effects of this but overall I would say there need to be smaller images available for the thumbnails.
+Below are some ideas; given the nature and time limitations of the challenge, that I wanted to approximately stay true to I did not implement much of the following.
+
+- Loading only what is visible using native intersection observer is fine or there already some nice hooks available.
+- Producing smaller images for the thumbnails, on server.
+- Producing LQIPs that could then even be served as one request or even inline since sizes can be around 3kb. Libraries such as crystalize allow to make nice SVG placeholders. The image component could then
+  use a hook to fetch the placeholder and replace with image once is has been loaded.
+- The aspect ratio of images could be served with the Image data, this could allow the page layout to be built before images are loaded and reduce the number of shifts which seems to currently affect the performance a lot.
+
+As for the performance of the fetch requests, these could be timed using console.time(). To improve that part, the image data could be fetched in batches and the state updated then by concatenating the responses.
+This should improve the experience a bit.
+
+# Notes
+
+Of course much more styling and optimization could be done all over the place; my goal was to make a quick and dirty MVP showcasing a few interesting and fun features.
