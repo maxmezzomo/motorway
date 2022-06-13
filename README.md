@@ -94,3 +94,4 @@ This should improve the experience a bit.
 # Notes
 
 Of course much more styling and optimization could be done all over the place; my goal was to make a quick and dirty MVP showcasing a few interesting and fun features.
+Also, it's not very clear that the image thumbnails can be clicked on to open a larger version.
