@@ -19,26 +19,32 @@ const ImageDetail = ({ image, onClose }: Props) => {
     <div
       style={{
         display: "flex",
-        width: "1200px",
-        height: "800px",
+        width: "90vw",
+        height: "80vh",
+        flexWrap: "wrap",
         background:
           "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(112,112,112,.5) 52%, rgba(38,38,38,1) 100%)",
         position: "relative",
+        overflow: "scroll",
       }}
     >
-      <div style={{ cursor: "pointer" }} onClick={() => onClose()}>
+      <div
+        style={{ cursor: "pointer", minWidth: 48 }}
+        onClick={() => onClose()}
+      >
         <IconClose fill="#ccc" />
       </div>
 
       <div
         style={{
           display: "flex",
-          width: "1000px",
-          height: "800px",
+          flex: 1,
           background: `${image.color}BB`,
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
+          minWidth: "65%",
+          maxHeight: "100%",
         }}
       >
         {/* <img
@@ -67,7 +73,8 @@ const ImageDetail = ({ image, onClose }: Props) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "30%",
+          flex: 1,
+          minWidth: 300,
           color: "#ccc",
           padding: 10,
         }}
@@ -112,7 +119,9 @@ const ImageDetail = ({ image, onClose }: Props) => {
           <ul
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
               alignItems: "center",
               margin: 0,
               padding: 0,
@@ -124,7 +133,7 @@ const ImageDetail = ({ image, onClose }: Props) => {
           >
             {values.map(
               ({ label, property, value, bounds: [minValue, maxValue] }) => (
-                <li>
+                <li style={{ margin: "0 1em" }}>
                   <Slider
                     {...{
                       label,
