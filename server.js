@@ -12,7 +12,7 @@ app.get("/images", ({ query }, res) => {
   console.log(res);
   setTimeout(() => {
     return res.status(200).json(i);
-  }, randomInterval(0, 1));
+  }, randomInterval(500, 1500));
 });
 
 app.listen(5000, () => {
